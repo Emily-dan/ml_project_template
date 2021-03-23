@@ -1,5 +1,5 @@
-export TRAINING_DATA=input/train_folds.csv
-export TEST_DATA=input/test.csv
+export TRAINING_DATA=input/categorical_feature_encoding/train_folds.csv
+export TEST_DATA=input/categorical_feature_encoding/test.csv
 export MODEL=$1
 
 #FOLD=0 python -m src.train

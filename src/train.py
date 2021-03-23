@@ -52,6 +52,6 @@ if __name__ == "__main__":
     preds = clf.predict_proba(valid_df)[:, 1]
     print(metrics.roc_auc_score(yvalid, preds))
 
-    joblib.dump(label_encoders, f"models/{MODEL}_{FOLD}_label_encoder.pkl")
-    joblib.dump(clf, f"models/{MODEL}_{FOLD}.pkl")
-    joblib.dump(train_df.columns, f"models/{MODEL}_{FOLD}_columns.pkl")
+    joblib.dump(label_encoders, f"models/categorical_feature_encoding/{MODEL}_{FOLD}_label_encoder.pkl")
+    joblib.dump(clf, f"models/categorical_feature_encoding/{MODEL}_{FOLD}.pkl")
+    joblib.dump(train_df.columns, f"models/categorical_feature_encoding/{MODEL}_{FOLD}_columns.pkl")

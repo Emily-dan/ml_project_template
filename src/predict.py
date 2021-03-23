@@ -20,14 +20,14 @@ def predict():
 
     for FOLD in range(5):
         df = pd.read_csv(TEST_DATA)
-        encoders = joblib.load(os.path.join("models", f"{MODEL}_{FOLD}_label_encoder.pkl"))
-        cols = joblib.load(os.path.join("models", f"{MODEL}_{FOLD}_columns.pkl"))
+        encoders = joblib.load(os.path.join("models/categorical_feature_encoding", f"{MODEL}_{FOLD}_label_encoder.pkl"))
+        cols = joblib.load(os.path.join("models/categorical_feature_encoding", f"{MODEL}_{FOLD}_columns.pkl"))
         for c in encoders:
             lbl = encoders[c]
             df.loc[:, c] = df.loc[:, c].astype(str).fillna("NONE")
             df.loc[:, c] = lbl.transform(df[c].values.tolist())
 
-        clf = joblib.load(os.path.join("models", f"{MODEL}_{FOLD}.pkl"))
+        clf = joblib.load(os.path.join("models/categorical_feature_encoding", f"{MODEL}_{FOLD}.pkl"))
 
         df = df[cols]
         preds = clf.predict_proba(df)[:, 1]
@@ -44,4 +44,4 @@ def predict():
 
 if __name__ == "__main__":
     submission = predict()
-    submission.to_csv(f"models/{MODEL}.csv", index=False)
+    submission.to_csv(f"models/categorical_feature_encoding/{MODEL}.csv", index=False)
