@@ -21,7 +21,7 @@ Code by Abhishek Thakur's video
 
 ## Binary Classification Metrics
 
-- Accuracy: `$\frac{TP+TN}{TP+TN+FP+FN}$`
+- Accuracy: $\frac{TP+TN}{TP+TN+FP+FN}$
 - Precision: `$\frac{TP}{TP+FP}$`
 - Recall: `$\frac{TP}{TP+FN}$`
 - F1-score(F1): `$\frac{2RP}{R+P}=\frac{2TP}{2TP+FP+FN}$`
