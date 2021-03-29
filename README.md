@@ -35,5 +35,6 @@ Code by Abhishek Thakur's video
 ## Encoding
 
 - binarization
-= label encoding
+- label encoding
 - one hot encoding
+- embedding
