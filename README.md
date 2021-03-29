@@ -41,8 +41,8 @@ Code by Abhishek Thakur's video
 
 ## Binary Regression Metrics
 
-- AE(absolute error): $\abs(y_{true} - y_{pred})$
-- MAE(mean absolute error): $\frac{1}{N} \sum_{i=1}^N \abs(y_{true_i} - y_{pred_i})$
+- AE(absolute error): $|y_{true} - y_{pred}|$
+- MAE(mean absolute error): $\frac{1}{N} \sum_{i=1}^N |y_{true_i} - y_{pred_i}|$
 - SE(squared error): $(y_{true} - y_{pred})^2$
 - MSE(mean squared error): $\frac{1}{N} \sum_{i=1}^N (y_{true_i} - y_{pred_i})^2$
 - SLE(squared log error): $(\log(1+y_{true}) - \log(1+y_{pred}))^2$
